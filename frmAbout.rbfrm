@@ -28,7 +28,7 @@ Begin Window frmAbout
       AcceptFocus     =   ""
       AcceptTabs      =   ""
       AutoDeactivate  =   True
-      Backdrop        =   638179327
+      Backdrop        =   1349124095
       DoubleBuffer    =   False
       Enabled         =   True
       EraseBackground =   True
@@ -73,7 +73,6 @@ Begin Window frmAbout
       Selectable      =   False
       TabIndex        =   2
       TabPanelIndex   =   0
-      TabStop         =   True
       Text            =   "Illumination Software Creator"
       TextAlign       =   0
       TextColor       =   0
@@ -108,7 +107,6 @@ Begin Window frmAbout
       Selectable      =   False
       TabIndex        =   3
       TabPanelIndex   =   0
-      TabStop         =   True
       Text            =   "1.0.0"
       TextAlign       =   0
       TextColor       =   0
@@ -143,7 +141,6 @@ Begin Window frmAbout
       Selectable      =   False
       TabIndex        =   4
       TabPanelIndex   =   0
-      TabStop         =   True
       Text            =   "Lunduke.com"
       TextAlign       =   1
       TextColor       =   0
@@ -178,7 +175,6 @@ Begin Window frmAbout
       Selectable      =   False
       TabIndex        =   5
       TabPanelIndex   =   0
-      TabStop         =   True
       Text            =   "Support This Project"
       TextAlign       =   1
       TextColor       =   0
@@ -213,7 +209,6 @@ Begin Window frmAbout
       Selectable      =   False
       TabIndex        =   9
       TabPanelIndex   =   0
-      TabStop         =   True
       Text            =   "Copyright 2010-2013, Bryan Lunduke"
       TextAlign       =   0
       TextColor       =   0
@@ -248,7 +243,6 @@ Begin Window frmAbout
       Selectable      =   False
       TabIndex        =   10
       TabPanelIndex   =   0
-      TabStop         =   True
       Text            =   "Illumination Software Creator is licensed under the terms of the GPLv2 license.\r\n\r\nThis software is made possible through contributions from good people just like you.  Testing, development, documentation and funding all helps to make Illumination Software Creator better and better."
       TextAlign       =   0
       TextColor       =   0

@@ -28,7 +28,7 @@ Begin Window frmFirstRunSimple
       AcceptFocus     =   ""
       AcceptTabs      =   ""
       AutoDeactivate  =   True
-      Backdrop        =   638179327
+      Backdrop        =   1349124095
       DoubleBuffer    =   False
       Enabled         =   True
       EraseBackground =   True
@@ -73,7 +73,6 @@ Begin Window frmFirstRunSimple
       Selectable      =   False
       TabIndex        =   2
       TabPanelIndex   =   0
-      TabStop         =   True
       Text            =   "RadicalBreeze.com"
       TextAlign       =   1
       TextColor       =   0
@@ -108,7 +107,6 @@ Begin Window frmFirstRunSimple
       Selectable      =   False
       TabIndex        =   3
       TabPanelIndex   =   0
-      TabStop         =   True
       Text            =   "Online Store"
       TextAlign       =   1
       TextColor       =   0
@@ -143,7 +141,6 @@ Begin Window frmFirstRunSimple
       Selectable      =   False
       TabIndex        =   4
       TabPanelIndex   =   0
-      TabStop         =   True
       Text            =   "Facebook Group"
       TextAlign       =   1
       TextColor       =   0
@@ -182,7 +179,7 @@ Begin Window frmFirstRunSimple
       LockTop         =   True
       Mask            =   ""
       Multiline       =   True
-      ReadOnly        =   False
+      ReadOnly        =   True
       Scope           =   0
       ScrollbarHorizontal=   ""
       ScrollbarVertical=   True
@@ -223,7 +220,6 @@ Begin Window frmFirstRunSimple
       Selectable      =   False
       TabIndex        =   6
       TabPanelIndex   =   0
-      TabStop         =   True
       Text            =   "Examples"
       TextAlign       =   1
       TextColor       =   0

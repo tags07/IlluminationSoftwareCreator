@@ -4,13 +4,13 @@ Begin Toolbar toolImageLib
 		Caption = "Add Image"
 		HelpTag = ""
 		Style = 0
-		Icon = 100984958
+		Icon = 1128282111
 	End
 	Begin ToolButton toolRemove
 		Caption = "Remove Image"
 		HelpTag = ""
 		Style = 0
-		Icon = 742124782
+		Icon = 723429375
 	End
 End
 #tag EndToolbar

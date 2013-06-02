@@ -278,7 +278,7 @@ End
 #tag Events RadLinkLabel2
 	#tag Event
 		Sub Action()
-		  ShowURL "http://lunduke.com/?page_id=3500"
+		  ShowURL "http://lunduke.com/?page_id=4449"
 		End Sub
 	#tag EndEvent
 #tag EndEvents

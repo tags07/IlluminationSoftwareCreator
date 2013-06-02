@@ -83,7 +83,7 @@ Begin Window frmProject
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
-      InitialValue    =   "User Interface\rText\rNumbers\rDictionaries\rLogic\rConversion\rSystem\rFiles\rCustom"
+      InitialValue    =   "User Interface\r\nText\r\nNumbers\r\nDictionaries\r\nLogic\r\nConversion\r\nSystem\r\nFiles\r\nCustom"
       Italic          =   ""
       Left            =   0
       ListIndex       =   0
@@ -112,9 +112,7 @@ Begin Window frmProject
       Left            =   0
       LockedInPosition=   False
       Scope           =   0
-      TabIndex        =   2
       TabPanelIndex   =   0
-      TabStop         =   True
       Top             =   -75
       Visible         =   True
       Width           =   830
@@ -168,7 +166,6 @@ Begin Window frmProject
       Selectable      =   False
       TabIndex        =   7
       TabPanelIndex   =   0
-      TabStop         =   True
       Text            =   "Variables:"
       TextAlign       =   0
       TextColor       =   0
@@ -189,9 +186,7 @@ Begin Window frmProject
       Mode            =   1
       Period          =   500
       Scope           =   0
-      TabIndex        =   5
       TabPanelIndex   =   0
-      TabStop         =   True
       Top             =   454
       Width           =   32
    End
@@ -313,9 +308,7 @@ Begin Window frmProject
       Mode            =   2
       Period          =   500
       Scope           =   0
-      TabIndex        =   9
       TabPanelIndex   =   0
-      TabStop         =   True
       Top             =   304
       Width           =   32
    End
@@ -341,7 +334,6 @@ Begin Window frmProject
       Selectable      =   False
       TabIndex        =   11
       TabPanelIndex   =   0
-      TabStop         =   True
       Text            =   ""
       TextAlign       =   0
       TextColor       =   0
@@ -508,11 +500,6 @@ End
 		    popCategory.Top = 3
 		  end if
 		  
-		  if app.kForUbuntuStore = true then
-		    'HelpRegisterIlluminationSoftwareCreator.Visible = false
-		    UntitledSeparator3.Visible = false
-		  end if
-		  
 		  populateListObjects
 		  ShowPropertiesForProject
 		  
@@ -672,7 +659,7 @@ End
 
 	#tag MenuHandler
 		Function HelpSupportForum() As Boolean Handles HelpSupportForum.Action
-			ShowURL "http://lunduke.com/forum/"
+			ShowURL "https://plus.google.com/u/0/communities/100249148073546311838"
 			Return True
 			
 		End Function
@@ -1542,7 +1529,7 @@ End
 		      
 		      
 		      if f2.Parent.Child(ReplaceAll(f2.Name, ".mxml", ".swf")) <> nil then
-		        'f2 = f2.Parent.Child(ReplaceAll(f2.Name, ".mxml", ".swf")) 
+		        'f2 = f2.Parent.Child(ReplaceAll(f2.Name, ".mxml", ".swf"))
 		        
 		        fHTML = f2.Parent.Child(modVariables.ProjectApplicationName + ".html")
 		        If fHTML <> Nil then
@@ -3146,10 +3133,6 @@ End
 		    dim m7 as MenuItem
 		    m7 = new MenuItem("Build iOS - iPad")
 		    m.Append m7
-		    
-		    dim m9 as MenuItem
-		    m9 = new MenuItem("Lunduke SDK")
-		    m.Append m9
 		    
 		    dim mr as MenuItem
 		    mr=m.Popup

@@ -417,7 +417,7 @@ End
 #tag Events btnForum
 	#tag Event
 		Sub Action()
-		  ShowURL "http://lunduke.com/forum"
+		  ShowURL "https://plus.google.com/u/0/communities/100249148073546311838"
 		End Sub
 	#tag EndEvent
 #tag EndEvents

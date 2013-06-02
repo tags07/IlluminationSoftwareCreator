@@ -248,18 +248,6 @@ Begin Menu MenuBar1
       Text = "Help"
       Index = -2147483648
       AutoEnable = True
-      Begin MenuItem HelpRegisterIlluminationSoftwareCreator
-         SpecialMenu = 0
-         Text = "Register Illumination Software Creator"
-         Index = -2147483648
-         AutoEnable = True
-      End
-      Begin MenuItem UntitledSeparator3
-         SpecialMenu = 0
-         Text = "-"
-         Index = -2147483648
-         AutoEnable = True
-      End
       Begin MenuItem HelpWelcomeToIlluminationSoftwareCreator
          SpecialMenu = 0
          Text = "Welcome To Illumination Software Creator"
@@ -274,7 +262,7 @@ Begin Menu MenuBar1
       End
       Begin MenuItem HelpSupportForum
          SpecialMenu = 0
-         Text = "Support Forum"
+         Text = "G+ Community"
          Index = -2147483648
          AutoEnable = True
       End

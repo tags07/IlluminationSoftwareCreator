@@ -2,12 +2,16 @@
 Protected Module modFile
 	#tag Method, Flags = &h0
 		Sub ClearTheDB()
-		  'CREATE TABLE GlobalVars (name text,type text)
-		  'CREATE TABLE UIPlatforms (rowID integer NOT NULL PRIMARY KEY AUTOINCREMENT,iluiobjectsRowID integer,platformConstantNum integer,enabled boolean,height integer,text text,visible boolean,width integer,x integer,y integer)'CREATE TABLE contentobjects (rowid integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,framesRowID integer,name text,input boolean,output boolean)
-		  'CREATE TABLE frames (rowid integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,x integer,y integer,width integer,title text,ilobjecttype text)
+		  'CREATE TABLE GlobalVars (name text,type text)
+		  
+		  'CREATE TABLE UIPlatforms (rowID integer NOT NULL PRIMARY KEY AUTOINCREMENT,iluiobjectsRowID integer,platformConstantNum integer,enabled boolean,height integer,text text,visible boolean,width integer,x integer,y integer)'CREATE TABLE contentobjects (rowid integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,framesRowID integer,name text,input boolean,output boolean)
+		  
+		  'CREATE TABLE frames (rowid integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,x integer,y integer,width integer,title text,ilobjecttype text)
+		  
 		  'CREATE TABLE ilobjects (rowid integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, customMessage text, MathVariable1 text, MathVariable2 text, MessageFromVariable text, OriginVariable text, UseVariableForMessage boolean, varControlName text, varWindowName text, windowObjectRowID integer, frameRowID integer)
 		  'CREATE TABLE iluiobjects (rowID integer NOT NULL PRIMARY KEY AUTOINCREMENT,ilobjectsRowID integer,controlType integer,HasContentObject boolean,name text)
-		  'CREATE TABLE links (rowid integer NOT NULL PRIMARY KEY AUTOINCREMENT,sourceCO integer,destinationCO integer)
+		  'CREATE TABLE links (rowid integer NOT NULL PRIMARY KEY AUTOINCREMENT,sourceCO integer,destinationCO integer)
+		  
 		  
 		  if theDB.Connect() then
 		    theDB.SQLExecute("DELETE * FROM GlobalVars")
@@ -143,12 +147,16 @@ Protected Module modFile
 
 	#tag Method, Flags = &h0
 		Sub InitTheDB(f as FolderItem)
-		  'CREATE TABLE GlobalVars (name text,type text)
-		  'CREATE TABLE UIPlatforms (rowID integer NOT NULL PRIMARY KEY AUTOINCREMENT,iluiobjectsRowID integer,platformConstantNum integer,enabled boolean,height integer,text text,visible boolean,width integer,x integer,y integer)'CREATE TABLE contentobjects (rowid integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,framesRowID integer,name text,input boolean,output boolean)
-		  'CREATE TABLE frames (rowid integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,x integer,y integer,width integer,title text,ilobjecttype text)
+		  'CREATE TABLE GlobalVars (name text,type text)
+		  
+		  'CREATE TABLE UIPlatforms (rowID integer NOT NULL PRIMARY KEY AUTOINCREMENT,iluiobjectsRowID integer,platformConstantNum integer,enabled boolean,height integer,text text,visible boolean,width integer,x integer,y integer)'CREATE TABLE contentobjects (rowid integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,framesRowID integer,name text,input boolean,output boolean)
+		  
+		  'CREATE TABLE frames (rowid integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,x integer,y integer,width integer,title text,ilobjecttype text)
+		  
 		  'CREATE TABLE ilobjects (rowid integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, customMessage text, MathVariable1 text, MathVariable2 text, MessageFromVariable text, OriginVariable text, UseVariableForMessage boolean, varControlName text, varWindowName text, windowObjectRowID integer, frameRowID integer)
 		  'CREATE TABLE iluiobjects (rowID integer NOT NULL PRIMARY KEY AUTOINCREMENT,ilobjectsRowID integer,controlType integer,HasContentObject boolean,name text)
-		  'CREATE TABLE links (rowid integer NOT NULL PRIMARY KEY AUTOINCREMENT,sourceCO integer,destinationCO integer)
+		  'CREATE TABLE links (rowid integer NOT NULL PRIMARY KEY AUTOINCREMENT,sourceCO integer,destinationCO integer)
+		  
 		  
 		  theDB=New REALSQLdatabase
 		  theDB.databaseFile=f
@@ -628,12 +636,12 @@ Protected Module modFile
 		  end if
 		  
 		  
-		  'CREATE TABLE ilobjects (rowid integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, customMessage text, MathVariable1 text, 
-		  'MathVariable2 text, MessageFromVariable text, OriginVariable text, UseVariableForMessage boolean, varControlName text, 
+		  'CREATE TABLE ilobjects (rowid integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, customMessage text, MathVariable1 text,
+		  'MathVariable2 text, MessageFromVariable text, OriginVariable text, UseVariableForMessage boolean, varControlName text,
 		  'varWindowName text, windowObjectRowID integer, frameRowID integer)
 		  
-		  'CREATE TABLE ilobjects (rowid integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, customMessage text, MathVariable1 text, 
-		  'MathVariable2 text, MessageFromVariable text, OriginVariable text, UseVariableForMessage boolean, varControlName text, 
+		  'CREATE TABLE ilobjects (rowid integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, customMessage text, MathVariable1 text,
+		  'MathVariable2 text, MessageFromVariable text, OriginVariable text, UseVariableForMessage boolean, varControlName text,
 		  'varWindowName text, windowObjectRowID integer, frameRowID integer)
 		  
 		  // Add the ilobject record
@@ -654,7 +662,7 @@ Protected Module modFile
 		  r.BooleanColumn("UseVariableForMessage") = ilObjectBase(theFrame.tag).UseVariableForMessage
 		  r.Column("varControlName") = ilObjectBase(theFrame.tag).varControlName
 		  r.Column("varWindowName") = ilObjectBase(theFrame.tag).varWindowName
-		  'r.IntegerColumn("windowObjectRowID") = 
+		  'r.IntegerColumn("windowObjectRowID") =
 		  r.IntegerColumn("frameRowID") = frameRowID
 		  theDB.InsertRecord("ilobjects",r)
 		  //////////////theDB.Commit
@@ -958,7 +966,6 @@ Protected Module modFile
 		  TextObject(frmProject.chartProject.frames(frmProject.chartProject.frames.Ubound).contents(0)).text = "This is a starter project.  Double click the Window Block below to begin designing the look and feel of your new app."
 		  ilObjectNote(frmProject.chartProject.frames(frmProject.chartProject.frames.Ubound).tag).CustomMessage = "This is a starter project.  Double click the Window Block below to begin designing the look and feel of your new app."
 		  
-		  
 		  // Add Window
 		  frmProject.AddNewObject("Window", 140, 120)
 		  
@@ -966,6 +973,10 @@ Protected Module modFile
 		  ContentObject(frmProject.chartProject.frames(0).contents(0)).AddOutputObject(ContentObject(frmProject.chartProject.frames(3).contents(0)))
 		  ContentObject(frmProject.chartProject.frames(3).contents(2)).AddOutputObject(ContentObject(frmProject.chartProject.frames(1).contents(0)))
 		  
+		  // Add Another Note
+		  frmProject.AddNewObject("Note", 140, 220)
+		  TextObject(frmProject.chartProject.frames(frmProject.chartProject.frames.Ubound).contents(0)).text = "Illumination is Free Software, supported by donations.  Learn more at www.Lunduke.com."
+		  ilObjectNote(frmProject.chartProject.frames(frmProject.chartProject.frames.Ubound).tag).CustomMessage = "Illumination is Free Software, supported by donations.  Learn more at www.Lunduke.com."
 		  
 		  
 		  
